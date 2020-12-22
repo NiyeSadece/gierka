@@ -8,5 +8,12 @@
 </head>
 <body>
 <h1>Gra</h1><h3>Wersja 1.0, Autorum: Niye</h3>
+<br>
+{{place.description}}
+<ol>
+{% for way in ways %}
+<li>{{way.description}}</li>
+    {% endfor %}
+</ol>
 </body>
 </html>
