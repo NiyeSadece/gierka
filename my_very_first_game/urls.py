@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from game_app.views import IndexView
+from game_app.views import IndexView, GoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view())
+    path('', IndexView.as_view(), name="index"),
+    path('go/<int:way_id>/', GoView.as_view()),
 ]

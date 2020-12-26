@@ -9,10 +9,15 @@
 <body>
 <h1>Gra</h1><h3>Wersja 1.0, Autorum: Niye</h3>
 <br>
-{{place.description}}
+{{ place.description }}
 <ol>
 {% for way in ways %}
-<li>{{way.description}}</li>
+<li>
+    {{ way.description }}
+    <form action="/go/{{ way.id }}/" method="post">
+        <input type="submit" value="Idź">
+    </form>
+</li>
     {% endfor %}
 </ol>
 </body>
